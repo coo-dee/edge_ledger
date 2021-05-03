@@ -1,0 +1,147 @@
+/* Text Colors */
+
+.text-primary {
+  color: #28a745;
+}
+::placeholder {
+  color: #9b9bac;
+}
+
+.text-secondary {
+  color: #0284d0;
+}
+ /* Button */
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background-color: #48d068;
+}
+
+.btn-primary, .bg-primary {
+  color: #fff;
+  background: #28a745;
+}
+
+.btn-secondary, .bg-secondary {
+  color: #fff;
+  background: #0284d0;
+}
+
+.btn-dark, .bg-dark {
+  color: rgb(255, 255, 255);
+  background: #0a0e2b;
+}
+
+.btn-light, .bg-light {
+  color: #333;
+  background: rgb(228, 243, 250) ;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #fff;
+}
+/* Flex Items */
+
+
+.flex-items {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.flex-items > div {
+  padding: 20px;
+}
+
+/* Flex Coloumns */
+
+.flex-coloumns.flex-reverse .row {
+  flex-direction: row-reverse;
+}
+
+.flex-coloumns .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
+.flex-coloumns .coloumn {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+
+.flex-coloumns img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flex-coloumns .coloumn-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  padding: 40px;
+}
+
+.flex-coloumns h2 {
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.flex-coloumns h4 {
+  margin-bottom: 10px;
+}
+
+.flex-coloumns p {
+  margin-bottom: 20px, 0;
+} 
+
+/* Section header */
+
+.section-header {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 40px;
+  margin: 20px, 0;
+}
+
+.section-padding {
+  padding: 20px, 20px, 40px;
+}
+
+/* Flex Grid */
+.flex-grid .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0, 1px;
+}
+
+.flex-grid .coloumn {
+  flex: 25%;
+  padding: 0 1px;
+  align-items: center;
+}

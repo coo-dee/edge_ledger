@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* Navbar */
+.navbar * {
+  z-index: 10;
+}
+
+.navbar {
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background:rgb(0, 0, 0);
+  color: #fff;
+  opacity: 0.8;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0px;
+  padding: 0 30px;
+  transition: 0.5s;
+}
+
+.navbar.top {
+  background: transparent;
+}
+
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 20px 20px;
+}
+
+.navbar a:hover {
+  border-bottom: #28a745 4px solid;
+
+}
+
+.navbar .logo {
+  font-weight: 600;
+}
+
+/* Header */
+
+.hero {
+  background: url('../images/home/showcase.jpg') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  color: white;
+}
+
+.hero .content { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%; /* Mivel a .hero parent 100vh ezért annak a 100%át vesszük */
+  padding: 0 20px;
+}
+
+.hero .content h1 {
+  font-size: 55px;
+  z-index: 1; /* Mivel a transparent bg letakarná a contentet ezért a z-index értékkel hozzuk előre (Minél nagyobb a z-index annál közelebb van hozzám) */
+}
+
+.hero .content p {
+  font-size: 22px;
+  width: 600px;
+  margin: 20px 0 30px; 
+  z-index: 1; /* Mivel a transparent bg letakarná a contentet ezért a z-index értékkel hozzuk előre (Minél nagyobb a z-index annál közelebb van hozzám) */
+}
+
+.hero .content .btn {
+  z-index: 1; /* Mivel a transparent bg letakarná a contentet ezért a z-index értékkel hozzuk előre (Minél nagyobb a z-index annál közelebb van hozzám) */
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0, 0.6); /* Utolsó érték a transparency */
+}
+
+.hero.blog {
+  background: url('../images/home/blog.jpg') no-repeat center center/cover;
+  height: 50vh;
+}
+
+/* Icons */
+
+.icons {
+  padding: 30px;
+}
+
+.icons h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.icons i {
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 50%;
+  padding: 1rem;
+  margin-bottom: 15px;
+}
+
+.cases img:hover {
+  opacity: 0.5;
+}
+
+/* Team */
+
+.team img {
+   border-radius: 50%;
+}
+
+/* Callback form */
+.callback-form {
+  width: 100%;
+  padding: 50px 0;
+}
+
+.callback-form label {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.callback-form .form-control {
+  margin-bottom: 10px;
+}
+
+.callback-form input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  padding-left: 15px;
+}
+
+.callback-form input:focus {
+  outline: 0;
+  border-radius: 8px;
+  background-color: rgb(253, 254, 255);
+  padding-left: 15px;
+}
+
+.callback-form .btn {
+  padding: 5px 0;
+  margin-top: 10px;
+}
+
+/* Post */
+
+.post {
+  padding: 50px 30px;
+}
+
+.post h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.post .meta {
+  margin-bottom: 20 px;
+}
+
+.post img {
+  width: 300px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 30px; /* 2 oldalon auto margin --- középre rakja */ 
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer a:hover {
+  color: #28a745;
+}
+
+.footer .social > * {
+  margin-right: 30px;
+  color: rgb(178, 206, 209);
+}
+
+/* Mobile */
+
+@media(max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: 120px;
+    padding: 20px;
+  }
+
+  .navbar a {
+    padding: 10px 10px;
+    margin: 0 3px;
+  }
+
+  .flex-items {
+    flex-direction: column;
+  }
+
+  .flex-coloumns .coloumn, .flex-grid .coloumn {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .team {
+    margin: 30px;
+  }
+}
